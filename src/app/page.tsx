@@ -14,7 +14,7 @@ import Footer from '@/components/shared/Footer';
 
 
 export default async function Home() {
-  const {resources} = await Cloudinary.api.resources_by_tag(String(process.env.NEXT_PUBLIC_CLOUDINARY_TAG_NAME));
+  const {resources} = await Cloudinary.api?.resources_by_tag(String(process.env.NEXT_PUBLIC_CLOUDINARY_TAG_NAME));
  
   return (
     <main className="flex min-h-screen flex-col">
